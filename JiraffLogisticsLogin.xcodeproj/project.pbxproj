@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981D5AC41A35F5FF00CEE84B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 98C829071A351F1800335B92 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98C828E21A350E3300335B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C828E11A350E3300335B92 /* AppDelegate.swift */; };
 		98C828E41A350E3300335B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C828E31A350E3300335B92 /* ViewController.swift */; };
 		98C828E71A350E3300335B92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98C828E51A350E3300335B92 /* Main.storyboard */; };
 		98C828E91A350E3300335B92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C828E81A350E3300335B92 /* Images.xcassets */; };
 		98C828EC1A350E3300335B92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C828EA1A350E3300335B92 /* LaunchScreen.xib */; };
 		98C828F81A350E3300335B92 /* JiraffLogisticsLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C828F71A350E3300335B92 /* JiraffLogisticsLoginTests.swift */; };
+		98C8290D1A3522A200335B92 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98C8290C1A3522A200335B92 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,42 @@
 			remoteGlobalIDString = 98C828DB1A350E3300335B92;
 			remoteInfo = JiraffLogisticsLogin;
 		};
+		98C829061A351F1800335B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98C829011A351F1700335B92 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		98C829081A351F1800335B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98C829011A351F1700335B92 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		98C8290A1A35213D00335B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98C829011A351F1700335B92 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		981D5AC21A35F5D600CEE84B /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				981D5AC41A35F5FF00CEE84B /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		98C828DC1A350E3300335B92 /* JiraffLogisticsLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiraffLogisticsLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +73,8 @@
 		98C828F11A350E3300335B92 /* JiraffLogisticsLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiraffLogisticsLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C828F61A350E3300335B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98C828F71A350E3300335B92 /* JiraffLogisticsLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraffLogisticsLoginTests.swift; sourceTree = "<group>"; };
+		98C829011A351F1700335B92 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		98C8290C1A3522A200335B92 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +98,11 @@
 		98C828D31A350E3300335B92 = {
 			isa = PBXGroup;
 			children = (
+				98C8290C1A3522A200335B92 /* credentials.plist */,
 				98C828DE1A350E3300335B92 /* JiraffLogisticsLogin */,
 				98C828F41A350E3300335B92 /* JiraffLogisticsLoginTests */,
 				98C828DD1A350E3300335B92 /* Products */,
+				98C829011A351F1700335B92 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +153,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		98C829021A351F1700335B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98C829071A351F1800335B92 /* Alamofire.framework */,
+				98C829091A351F1800335B92 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +172,12 @@
 				98C828D81A350E3300335B92 /* Sources */,
 				98C828D91A350E3300335B92 /* Frameworks */,
 				98C828DA1A350E3300335B92 /* Resources */,
+				981D5AC21A35F5D600CEE84B /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				98C8290B1A35213D00335B92 /* PBXTargetDependency */,
 			);
 			name = JiraffLogisticsLogin;
 			productName = JiraffLogisticsLogin;
@@ -179,6 +231,12 @@
 			mainGroup = 98C828D31A350E3300335B92;
 			productRefGroup = 98C828DD1A350E3300335B92 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 98C829021A351F1700335B92 /* Products */;
+					ProjectRef = 98C829011A351F1700335B92 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				98C828DB1A350E3300335B92 /* JiraffLogisticsLogin */,
@@ -187,12 +245,30 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		98C829071A351F1800335B92 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 98C829061A351F1800335B92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		98C829091A351F1800335B92 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 98C829081A351F1800335B92 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		98C828DA1A350E3300335B92 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				98C828E71A350E3300335B92 /* Main.storyboard in Resources */,
+				98C8290D1A3522A200335B92 /* credentials.plist in Resources */,
 				98C828EC1A350E3300335B92 /* LaunchScreen.xib in Resources */,
 				98C828E91A350E3300335B92 /* Images.xcassets in Resources */,
 			);
@@ -232,6 +308,11 @@
 			isa = PBXTargetDependency;
 			target = 98C828DB1A350E3300335B92 /* JiraffLogisticsLogin */;
 			targetProxy = 98C828F21A350E3300335B92 /* PBXContainerItemProxy */;
+		};
+		98C8290B1A35213D00335B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 98C8290A1A35213D00335B92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -339,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JiraffLogisticsLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JiraffLogisticsLogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -407,6 +490,7 @@
 				98C828FD1A350E3300335B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98C828FE1A350E3300335B92 /* Build configuration list for PBXNativeTarget "JiraffLogisticsLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +499,7 @@
 				98C829001A350E3300335B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
