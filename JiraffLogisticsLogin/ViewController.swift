@@ -18,14 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     
     @IBAction func outputPlist(sender: AnyObject) {
-        
-        let path = NSBundle.mainBundle().pathForResource("credentials", ofType: "plist")!
-        var myDict: NSMutableDictionary = NSMutableDictionary(contentsOfFile: path)!
-        var login: String = myDict.valueForKey("login") as String,
-            password: String =  myDict.valueForKey("password") as String
-        myDict.setValue((login + password) as NSString, forKey: "login" as NSString)
-        myDict.writeToFile(path, atomically: true)
-        labelErrorHandler.text = "Логин: \(login) Пароль: \(password)\n"
+        var google_api_key = Config.get("google_api_key")
+        labelErrorHandler.text = "GKey: \(google_api_key)\n"
     }
     
     @IBAction func verifyCredentials(sender: AnyObject) {
