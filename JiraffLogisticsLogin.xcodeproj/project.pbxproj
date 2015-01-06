@@ -21,6 +21,9 @@
 		981AEB801A5C108A004DAA3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981AEB7F1A5C108A004DAA3C /* QuartzCore.framework */; };
 		981AEB821A5C1091004DAA3C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981AEB811A5C1091004DAA3C /* SystemConfiguration.framework */; };
 		981AEB8B1A5C15C2004DAA3C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981AEB8A1A5C15C2004DAA3C /* Config.swift */; };
+		981AEB901A5C7102004DAA3C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981AEB8F1A5C7102004DAA3C /* MapViewController.swift */; };
+		981AEB921A5C762C004DAA3C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981AEB911A5C762C004DAA3C /* NavigationController.swift */; };
+		981AEB941A5C7AAF004DAA3C /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 981AEB931A5C7AAF004DAA3C /* GoogleMaps.bundle */; };
 		981D5AC41A35F5FF00CEE84B /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 98C829071A351F1800335B92 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98C828E21A350E3300335B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C828E11A350E3300335B92 /* AppDelegate.swift */; };
 		98C828E41A350E3300335B92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C828E31A350E3300335B92 /* ViewController.swift */; };
@@ -92,6 +95,9 @@
 		981AEB811A5C1091004DAA3C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		981AEB831A5C14BD004DAA3C /* JiraffLogisticsLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JiraffLogisticsLogin-Bridging-Header.h"; sourceTree = "<group>"; };
 		981AEB8A1A5C15C2004DAA3C /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		981AEB8F1A5C7102004DAA3C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		981AEB911A5C762C004DAA3C /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		981AEB931A5C7AAF004DAA3C /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		98C828DC1A350E3300335B92 /* JiraffLogisticsLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiraffLogisticsLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C828E01A350E3300335B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98C828E11A350E3300335B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +109,7 @@
 		98C828F61A350E3300335B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98C828F71A350E3300335B92 /* JiraffLogisticsLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiraffLogisticsLoginTests.swift; sourceTree = "<group>"; };
 		98C829011A351F1700335B92 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		98C8290C1A3522A200335B92 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		98C8290C1A3522A200335B92 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 		981AEB661A5C0F0C004DAA3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				981AEB931A5C7AAF004DAA3C /* GoogleMaps.bundle */,
 				981AEB811A5C1091004DAA3C /* SystemConfiguration.framework */,
 				981AEB7F1A5C108A004DAA3C /* QuartzCore.framework */,
 				981AEB7D1A5C1083004DAA3C /* OpenGLES.framework */,
@@ -161,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				98C828E31A350E3300335B92 /* ViewController.swift */,
+				981AEB8F1A5C7102004DAA3C /* MapViewController.swift */,
+				981AEB911A5C762C004DAA3C /* NavigationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -188,11 +197,18 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		981AEB8E1A5C6279004DAA3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98C8290C1A3522A200335B92 /* credentials.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		98C828D31A350E3300335B92 = {
 			isa = PBXGroup;
 			children = (
 				981AEB661A5C0F0C004DAA3C /* Frameworks */,
-				98C8290C1A3522A200335B92 /* credentials.plist */,
 				98C828DE1A350E3300335B92 /* JiraffLogisticsLogin */,
 				98C828F41A350E3300335B92 /* JiraffLogisticsLoginTests */,
 				98C828DD1A350E3300335B92 /* Products */,
@@ -213,6 +229,7 @@
 		98C828DE1A350E3300335B92 /* JiraffLogisticsLogin */ = {
 			isa = PBXGroup;
 			children = (
+				981AEB8E1A5C6279004DAA3C /* Resources */,
 				981AEB891A5C1594004DAA3C /* Assets */,
 				981AEB881A5C157E004DAA3C /* Models */,
 				981AEB871A5C1577004DAA3C /* Views */,
@@ -368,6 +385,7 @@
 				98C8290D1A3522A200335B92 /* credentials.plist in Resources */,
 				98C828EC1A350E3300335B92 /* LaunchScreen.xib in Resources */,
 				98C828E91A350E3300335B92 /* Images.xcassets in Resources */,
+				981AEB941A5C7AAF004DAA3C /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +405,9 @@
 			files = (
 				98C828E41A350E3300335B92 /* ViewController.swift in Sources */,
 				98C828E21A350E3300335B92 /* AppDelegate.swift in Sources */,
+				981AEB921A5C762C004DAA3C /* NavigationController.swift in Sources */,
 				981AEB8B1A5C15C2004DAA3C /* Config.swift in Sources */,
+				981AEB901A5C7102004DAA3C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

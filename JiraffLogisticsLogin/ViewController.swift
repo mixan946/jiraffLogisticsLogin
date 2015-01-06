@@ -26,21 +26,20 @@ class ViewController: UIViewController {
         let params = ["login": textFieldLogin.text, "password": textFieldPassword.text]
         Alamofire.request(.GET, "http://localhost:4567/users/sign_in", parameters: params)
                  .validate()
-                 .responseJSON{(_, _, json_response, error) in
+                 .responseJSON{ (_, _, json_response, error) in
                     self.stopSpinner()
+    
                     let json = json_response as Dictionary<String, String>
                     if error == nil{
-                        self.labelErrorHandler.text = json["success"]
+                        self.toMapView()
                     }else{
                         self.labelErrorHandler.text = json["error"]
                     }
-
                  }
 
         startSpinner()
         textFieldLogin.resignFirstResponder()
         textFieldPassword.resignFirstResponder()
-        
     }
     
     override func viewDidLoad() {
@@ -53,7 +52,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func startSpinner(){
         activitySpinner.hidden = false
         activitySpinner.startAnimating()
@@ -62,6 +61,12 @@ class ViewController: UIViewController {
     func stopSpinner(){
         activitySpinner.hidden = true
         activitySpinner.stopAnimating()
+    }
+    
+    func toMapView(){
+        let map_view = self.storyboard?.instantiateViewControllerWithIdentifier("mapView") as MapViewController
+        
+        navigationController?.pushViewController(map_view, animated: true)
     }
 
 }
